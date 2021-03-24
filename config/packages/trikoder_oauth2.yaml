@@ -1,0 +1,14 @@
+trikoder_oauth2:
+
+    authorization_server:
+        private_key: '%kernel.project_dir%/private.key'
+        private_key_passphrase: null                            # Passphrase of the private key, if any
+
+        encryption_key: '%env(string:OAUTH2_ENCRYPTION_KEY)%'   # (Optional) Change this
+
+    resource_server:
+        public_key: '%kernel.project_dir%/public.key'
+
+    persistence:
+        doctrine:
+            entity_manager: default
